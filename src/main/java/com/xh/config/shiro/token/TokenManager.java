@@ -1,4 +1,4 @@
-package com.xh.shiro.token;
+package com.xh.config.shiro.token;
 
 public class TokenManager {
 

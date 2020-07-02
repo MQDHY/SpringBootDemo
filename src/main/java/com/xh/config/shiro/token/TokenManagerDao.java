@@ -1,13 +1,10 @@
-package com.xh.shiro.token;
+package com.xh.config.shiro.token;
 
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.mgt.eis.CachingSessionDAO;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.Resource;
 import java.io.Serializable;
 
 

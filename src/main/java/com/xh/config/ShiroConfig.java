@@ -1,10 +1,8 @@
 package com.xh.config;
 
-import com.xh.shiro.UserRealm;
-import com.xh.shiro.token.TokenManagerDao;
+import com.xh.config.shiro.UserRealm;
+import com.xh.config.shiro.token.TokenManagerDao;
 import org.apache.shiro.session.mgt.DefaultSessionManager;
-import org.apache.shiro.session.mgt.SessionManager;
-import org.apache.shiro.session.mgt.eis.SessionDAO;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.context.annotation.Bean;
@@ -39,7 +37,7 @@ public class ShiroConfig {
      * @return
      */
     @Bean
-    public DefaultWebSecurityManager defaultWebSecurityManager(UserRealm userRealm,DefaultSessionManager defaultSessionManager){
+    public DefaultWebSecurityManager defaultWebSecurityManager(UserRealm userRealm, DefaultSessionManager defaultSessionManager){
         DefaultWebSecurityManager defaultWebSecurityManager = new DefaultWebSecurityManager();
         defaultWebSecurityManager.setRealm(userRealm);
         defaultWebSecurityManager.setSessionManager(defaultSessionManager);

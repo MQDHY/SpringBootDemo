@@ -11,6 +11,6 @@ public class AdminController {
     @RequestMapping
     @ResponseBody
     public String admin(){
-        return "你好";
+        return "你好1";
     }
 }
