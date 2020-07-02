@@ -1,5 +1,8 @@
 package com.xh.model.admin.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableName;
+
+@TableName("sys_user")
 public class AdminModel {
     private String user_name;
     private String password;

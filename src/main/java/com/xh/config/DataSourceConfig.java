@@ -2,6 +2,7 @@ package com.xh.config;
 
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
 import com.xh.config.aop.dataSource.DynamicDataSourceHolder;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -84,7 +85,7 @@ public class DataSourceConfig {
     //将数据源路由配置到SqlSession工厂里面 数据源路由要指定默认的数据源是哪个
     @Bean
     public SqlSessionFactory sqlSessionFactoryBean(DynamicDataSource dynamicDataSource) throws Exception {
-        SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+        MybatisSqlSessionFactoryBean sqlSessionFactoryBean = new MybatisSqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dynamicDataSource);
         return sqlSessionFactoryBean.getObject();
     }

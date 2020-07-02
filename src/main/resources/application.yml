@@ -6,6 +6,10 @@ server:
 #    url: jdbc:mysql://127.0.0.1:3306/ssm?useUnicode=true&amp;characterEncoding=UTF-8
 #    username: root
 #    password: 123456
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
 mybatis:
   type-aliases-package: com.xh.model.user.pojo.*,com.xh.model.admin.pojo.*
 logging:

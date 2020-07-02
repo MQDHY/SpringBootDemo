@@ -1,5 +1,6 @@
 package com.xh;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.xh.model.admin.pojo.AdminModel;
 import com.xh.model.admin.service.AdminService;
 import com.xh.model.user.dao.UserDao;
@@ -30,7 +31,11 @@ class SpringbootDemoApplicationTests {
     void contextLoads() {
 //        redisTemplate.opsForValue().set("name","123");
         UserModel user = userService.findByUserName("admin");
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("uname","admin");
+        UserModel one = userService.getOne(queryWrapper);
         System.out.println(user);
+        System.out.println(one);
         AdminModel admin = adminService.findByAdminName("root");
         System.out.println(admin);
     }
